@@ -33,11 +33,11 @@
   <div class="title-wrapper">
     <div class="container">
 
-      <img src="/assets/images/logo.png" class="pull-left logo" alt="The Will Will Web">
+      <img [title]="title" [src]="imgurl" [attr.data-title]="title" class="pull-left logo" alt="The Will Will Web">
 
       <div class="pull-left">
         <h1>
-          <a href="{{ url }}">{{ title }}</a>
+          <a [href]="url">{{ title }}</a>
         </h1>
         <h3>記載著 Will 在網路世界的學習心得與技術分享</h3>
       </div>
@@ -194,7 +194,7 @@
           <div class="widget-content">
             <div style="text-align: center">
               <div id="calendarContainer">
-                <table class="calendar" summary="" style=";border-collapse:collapse;">
+                <table class="calendar" summary="" style="border-collapse:collapse;">
                   <tbody>
                     <tr>
                       <td>
@@ -373,16 +373,14 @@
                   class="moreLink">[更多...]</a>
               </li>
               <li>
-                <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx"
-                  class="postTitle">購買與安裝 SSL 憑證完全攻略（以 IIS7 為例）</a> (25)
+                <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx" class="postTitle">購買與安裝 SSL 憑證完全攻略（以 IIS7 為例）</a> (25)
                 <br>
                 <a href="http://www.miniasp.com/" rel="nofollow">多奇數位Joseph</a> 說: Hi Nat, 憑證申請主要分兩個步驟 (1)產生CSR並上傳至第三方認證機構的網站 (2)從第三...
                 <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx#id_0f91957b-880c-489d-b8c1-6364f6f9a8b8"
                   class="moreLink">[更多...]</a>
               </li>
               <li>
-                <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx"
-                  class="postTitle">購買與安裝 SSL 憑證完全攻略（以 IIS7 為例）</a> (25)
+                <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx" class="postTitle">購買與安裝 SSL 憑證完全攻略（以 IIS7 為例）</a> (25)
                 <br>
                 <a href="http://www.dotblogs.com.tw/nattu319" rel="nofollow">Nat</a> 說: 保哥,可以請教一下,我目前於國外申請Comodo的Comodo Wildcard SSL產品申請下來...
                 <a href="http://blog.miniasp.com/post/2010/03/02/The-Complete-Guide-for-Purchase-Install-SSL-Certificate-to-IIS7.aspx#id_85bd439d-b7fb-4c3d-a266-481d0477ff01"
@@ -414,8 +412,7 @@
               <ul class="xoxo">
                 <li>
                   <a href="http://weblogs.asp.net/scottgu/rss.aspx">
-                    <img src="/assets/images/rssButton.png" alt="RSS feed for ScottGu&#39;s Blog - ScottGu&#39;s Blog" width="12"
-                      height="12">
+                    <img src="/assets/images/rssButton.png" alt="RSS feed for ScottGu&#39;s Blog - ScottGu&#39;s Blog" width="12" height="12">
                   </a>
                   <a href="http://weblogs.asp.net/scottgu/" rel="contact">ScottGu's Blog - ScottG...</a>
                   <ul>
