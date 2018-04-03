@@ -11,10 +11,9 @@ export class AppComponent {
   imgurl = '/assets/images/logo.png';
   constructor() {
   }
-  changeTitle($event: MouseEvent) {
-    if ($event.altKey) {
+  changeTitle(altKey: boolean) {
+    if (altKey) {
       this.title  = 'The Will Will Web';
     }
-    console.log($event);
   }
 }
