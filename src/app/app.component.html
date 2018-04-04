@@ -8,92 +8,25 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <article class="post" id="post0">
+        <article class="post" id="post{{idx}}" *ngFor="let item of data; let idx=index">
           <header class="post-header">
             <h2 class="post-title">
-              <a href="http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx">從命令提示字元中開啟 Visual Studio Code 如何避免顯示惱人的偵錯訊息</a>
+              <a [href]="item.href">{{item.title}}</a>
             </h2>
             <div class="post-info clearfix">
               <span class="post-date">
-                <i class="glyphicon glyphicon-calendar"></i>2016/04/30 18:05</span>
+                <i class="glyphicon glyphicon-calendar"></i>{{item.date}}</span>
               <span class="post-author">
                 <i class="glyphicon glyphicon-user"></i>
-                <a href="http://blog.miniasp.com/author/will.aspx">Will 保哥</a>
+                <a href="http://blog.miniasp.com/author/will.aspx">{{item.author}}</a>
               </span>
               <span class="post-category">
                 <i class="glyphicon glyphicon-folder-close"></i>
-                <a href="http://blog.miniasp.com/category/Visual-Studio.aspx">Visual Studio</a>
+                <a [href]="item['category-link']">{{item.category}}</a>
               </span>
             </div>
           </header>
-          <section class="post-body text">
-            <p>由於我的 Visual Studio Code 大部分時候都是在命令提示字元下啟動，所以只要用
-              <strong>
-                <font color="#ff0000" face="Consolas">code .</font>
-              </strong> 就可以快速啟動 Visual Studio Code 並自動開啟目前所在資料夾。不過不知道從哪個版本開始，我在啟動 Visual Studio Code 之後，卻開始在原本所在的命令提示字元視窗中出現一堆惱人的偵錯訊息，本篇文章試圖解析這個現象，並提出解決辦法。</p>
-            <p>...
-              <a class="more" href="http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx#continue">繼續閱讀</a> ...</p>
-          </section>
-        </article>
-
-        <article class="post" id="post1">
-          <header class="post-header">
-            <h2 class="post-title">
-              <a href="http://blog.miniasp.com/post/2016/03/22/Does-Certification-Exam-Useful.aspx">考證照真的沒用嗎？一個從業 20 年的 IT 主管告訴你他怎麼看！</a>
-            </h2>
-            <div class="post-info clearfix">
-              <span class="post-date">
-                <i class="glyphicon glyphicon-calendar"></i>2016/03/22 19:28</span>
-              <span class="post-author">
-                <i class="glyphicon glyphicon-user"></i>
-                <a href="http://blog.miniasp.com/author/will.aspx">Will 保哥</a>
-              </span>
-              <span class="post-category">
-                <i class="glyphicon glyphicon-folder-close"></i>
-                <a href="http://blog.miniasp.com/category/%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB.aspx">心得分享</a>
-              </span>
-            </div>
-          </header>
-          <section class="post-body text">
-            <p>其實無論在哪個國家都有推行證照制度，且行之有年，台灣當然也不例外，這件事一開始的立意都是好的，就是希望透過一套公平的考試制度，評估一個人的技術能力是否達到一定程度水準，不但能當成一個人的能力指標，也可以讓大家有個明確目標朝專業之路邁進。其他的行業我不清楚，但就我本身熟悉的
-              IT 產業來說，不知何年何月開始，大家開始對證照制度嗤之以鼻、不屑一顧，甚至覺得是一個人能力的
-              <strong>負指標</strong> (也就是能力不好的人才需要靠證照證明自己)。你說這現象是何等的詭異？是什麼樣的天時、地利、人和，可以讓一個原本立意良善的制度，變成人人喊打的落水狗，可能連有張證照都還不敢承認的地步。今天，就來談談我的個人見解。</p>
-            <p>...
-              <a class="more" href="http://blog.miniasp.com/post/2016/03/22/Does-Certification-Exam-Useful.aspx#continue">繼續閱讀</a> ...</p>
-          </section>
-        </article>
-
-        <article class="post" id="post2">
-          <header class="post-header">
-            <h2 class="post-title">
-              <a href="http://blog.miniasp.com/post/2016/03/14/ASPNET-MVC-Developer-Note-Part-28-Understanding-ModelState.aspx">ASP.NET MVC 開發心得分享 (28)：深入瞭解 ModelState 內部細節</a>
-            </h2>
-            <div class="post-info clearfix">
-              <span class="post-date">
-                <i class="glyphicon glyphicon-calendar"></i>2016/03/14 12:14</span>
-              <span class="post-author">
-                <i class="glyphicon glyphicon-user"></i>
-                <a href="http://blog.miniasp.com/author/will.aspx">Will 保哥</a>
-              </span>
-              <span class="post-category">
-                <i class="glyphicon glyphicon-folder-close"></i>
-                <a href="http://blog.miniasp.com/category/ASPNET-MVC.aspx">ASP.NET MVC</a>
-              </span>
-            </div>
-          </header>
-          <section class="post-body text">
-            <p>在 ASP.NET MVC 的
-              <strong>模型繫結</strong> (Model Binding) 完成之後，我們可以在 Controller / Action 中取得
-              <span style="font-family: Consolas;">ModelState</span> 物件，一般來說我們都會用
-              <span style="font-family: Consolas;">
-                <strong>ModelState.IsValid</strong>
-              </span> 來檢查在「模型繫結」的過程中所做的
-              <strong>輸入驗證</strong> (Input Validation) 與
-              <strong>模型驗證</strong> (Model Validation) 是否成功。不過，這個
-              <span style="font-family: Consolas;">ModelState</span> 物件的用途很廣，裡面存有非常多模型繫結過程的狀態資訊，不但在 Controller 中能用，在 View 裡面也能使用，用的好的話，可以讓你的 Controller 更輕、View
-              也更乾淨，本篇文章將分享幾個 ModelState 的使用技巧。</p>
-            <p>...
-              <a class="more" href="http://blog.miniasp.com/post/2016/03/14/ASPNET-MVC-Developer-Note-Part-28-Understanding-ModelState.aspx#continue">繼續閱讀</a> ...</p>
+          <section class="post-body text" [innerHTML]="item.summary">
           </section>
         </article>
         <!-- Article END-->
