@@ -178,8 +178,12 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s">
+              <input type="text"
+                (keyup)="keywordChanges($event.target.value)"
+                (keyup.escape)="keywordReset($event.target)"
+                placeholder="請輸入搜尋關鍵字" accesskey="s">
               <input type="button" value="搜尋" id="searchbutton">
+              <br> 目前字數: {{ wordcount }}
             </div>
           </div>
         </div>
