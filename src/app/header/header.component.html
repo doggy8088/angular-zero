@@ -40,7 +40,7 @@
         <h1>
           <a [href]="url">{{ title }}</a>
         </h1>
-        <h3 [style.font-size]="(12+counter)+'px'" [style.color]="'red'">記載著 Will 在網路世界的學習心得與技術分享 {{ counter }}</h3>
+        <h3 [class.highlight]="counter % 2 == 0">記載著 Will 在網路世界的學習心得與技術分享 {{ counter }}</h3>
       </div>
 
       <div id="social-icons" class="pull-right social-icon">
