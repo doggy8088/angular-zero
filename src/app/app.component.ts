@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app';
   url = 'http://blog.miniasp.com/';
   imgurl = '/assets/images/logo.png';
-  wordcount = 0;
+  keyword = '';
 
   constructor() {
   }
@@ -18,11 +18,7 @@ export class AppComponent {
       this.title  = 'The Will Will Web';
     }
   }
-  keywordChanges(keyword: string) {
-    this.wordcount = keyword.length;
-  }
-  keywordReset(input: HTMLInputElement) {
-    input.value = '';
-    this.wordcount = 0;
+  keywordReset() {
+    this.keyword = '';
   }
 }
