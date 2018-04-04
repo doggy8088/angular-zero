@@ -43,25 +43,32 @@
         <h3 [class.highlight]="counter % 2 == 0">記載著 Will 在網路世界的學習心得與技術分享 {{ counter }}</h3>
       </div>
 
-      <div id="social-icons" class="pull-right social-icon" *ngIf="counter % 2 == 0">
-        <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
-          <img src="/assets/images/facebook.png">
-        </a>
-        <a href="https://twitter.com/Will_Huang" title="@Will_Huang 保哥的推特" target="_blank">
-          <img src="/assets/images/twitter.png">
-        </a>
-        <a href="https://plus.google.com/+WillHuang" title="Will Huang (保哥) on Google+" target="_blank">
-          <img src="/assets/images/googleplus.png">
-        </a>
-        <a href="http://www.plurk.com/willh" title="★★★ Will 保哥的噗浪 ★★★" target="_blank">
-          <img src="/assets/images/plurk.png">
-        </a>
-        <a href="http://www.weibo.com/cnwill" title="Will 保哥的微博" target="_blank">
-          <img src="/assets/images/weibo.png">
-        </a>
-        <a href="http://blog.miniasp.com/syndication.axd" title="RSS 訂閱" target="_blank">
-          <img src="/assets/images/rss.png">
-        </a>
+      <div id="social-icons" class="pull-right social-icon">
+        <ng-container [ngSwitch]="counter % 2">
+          <ng-container *ngSwitchCase="0">
+            <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
+              <img src="/assets/images/facebook.png">
+            </a>
+            <a href="https://twitter.com/Will_Huang" title="@Will_Huang 保哥的推特" target="_blank">
+              <img src="/assets/images/twitter.png">
+            </a>
+            <a href="https://plus.google.com/+WillHuang" title="Will Huang (保哥) on Google+" target="_blank">
+              <img src="/assets/images/googleplus.png">
+            </a>
+          </ng-container>
+          <ng-container *ngSwitchCase="1">
+            <a href="http://www.plurk.com/willh" title="★★★ Will 保哥的噗浪 ★★★" target="_blank">
+              <img src="/assets/images/plurk.png">
+            </a>
+            <a href="http://www.weibo.com/cnwill" title="Will 保哥的微博" target="_blank">
+              <img src="/assets/images/weibo.png">
+            </a>
+            <a href="http://blog.miniasp.com/syndication.axd" title="RSS 訂閱" target="_blank">
+              <img src="/assets/images/rss.png">
+            </a>
+          </ng-container>
+          <ng-container *ngSwitchDefault>N/A</ng-container>
+        </ng-container>
       </div>
 
     </div>
