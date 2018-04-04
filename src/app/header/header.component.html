@@ -43,7 +43,7 @@
         <h3 [class.highlight]="counter % 2 == 0">記載著 Will 在網路世界的學習心得與技術分享 {{ counter }}</h3>
       </div>
 
-      <div id="social-icons" class="pull-right social-icon">
+      <div id="social-icons" class="pull-right social-icon" *ngIf="counter % 2 == 0">
         <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
           <img src="/assets/images/facebook.png">
         </a>
