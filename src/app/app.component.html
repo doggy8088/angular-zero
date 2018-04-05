@@ -1,25 +1,5 @@
 <app-header #tHeader></app-header>
 
-<div>
-    <!--output '$0.259'-->
-    <p>A: {{a | currency}}</p>
-
-    <!--output 'CA$0.26'-->
-    <p>A: {{a | currency:'CAD'}}</p>
-
-    <!--output 'CAD0.26'-->
-    <p>A: {{a | currency:'CAD':'code'}}</p>
-
-    <!--output 'CA$0,001.35'-->
-    <p>B: {{b | currency:'CAD':'symbol':'4.2-2'}}</p>
-
-    <!--output '$0,001.35'-->
-    <p>B: {{b | currency:'CAD':'symbol-narrow':'4.2-2'}}</p>
-
-    <!--output '0 001,35 CA$'-->
-    <p>B: {{b | currency:'CAD':'symbol':'4.2-2':'fr'}}</p>
-</div>
-
 <!-- CONTAINER START-->
 <section class="container" (click)="tHeader.title = 'Title changed'">
   <div class="row">
@@ -35,7 +15,7 @@
             </h2>
             <div class="post-info clearfix">
               <span class="post-date">
-                <i class="glyphicon glyphicon-calendar"></i>{{item.date}}</span>
+                <i class="glyphicon glyphicon-calendar"></i>{{item.date|date:'shortDate'}}</span>
               <span class="post-author">
                 <i class="glyphicon glyphicon-user"></i>
                 <a href="http://blog.miniasp.com/author/will.aspx">{{item.author}}</a>

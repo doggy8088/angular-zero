@@ -8,9 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   keyword = '';
 
-  a: number = 0.259;
-  b: number = 1.3495;
-
   constructor() {
   }
   keywordReset() {
