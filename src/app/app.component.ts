@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   keyword = '';
 
-  pi: number = 3.14;
-  e: number = 2.718281828459045;
+  a: number = 0.259;
+  b: number = 1.3495;
 
   constructor() {
   }

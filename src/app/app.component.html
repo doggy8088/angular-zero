@@ -1,27 +1,24 @@
 <app-header #tHeader></app-header>
 
 <div>
-    <!--output '2.718'-->
-    <p>e (no formatting): {{e | number}}</p>
+    <!--output '$0.259'-->
+    <p>A: {{a | currency}}</p>
 
-    <!--output '002.71828'-->
-    <p>e (3.1-5): {{e | number:'3.1-5'}}</p>
+    <!--output 'CA$0.26'-->
+    <p>A: {{a | currency:'CAD'}}</p>
 
-    <!--output '0,002.71828'-->
-    <p>e (4.5-5): {{e | number:'4.5-5'}}</p>
+    <!--output 'CAD0.26'-->
+    <p>A: {{a | currency:'CAD':'code'}}</p>
 
-    <!--output '0 002,71828'-->
-    <p>e (french): {{e | number:'4.5-5':'fr'}}</p>
+    <!--output 'CA$0,001.35'-->
+    <p>B: {{b | currency:'CAD':'symbol':'4.2-2'}}</p>
 
-    <!--output '3.14'-->
-    <p>pi (no formatting): {{pi | number}}</p>
+    <!--output '$0,001.35'-->
+    <p>B: {{b | currency:'CAD':'symbol-narrow':'4.2-2'}}</p>
 
-    <!--output '003.14'-->
-    <p>pi (3.1-5): {{pi | number:'3.1-5'}}</p>
-
-    <!--output '003.14000'-->
-    <p>pi (3.5-5): {{pi | number:'3.5-5'}}</p>
-  </div>
+    <!--output '0 001,35 CA$'-->
+    <p>B: {{b | currency:'CAD':'symbol':'4.2-2':'fr'}}</p>
+</div>
 
 <!-- CONTAINER START-->
 <section class="container" (click)="tHeader.title = 'Title changed'">
