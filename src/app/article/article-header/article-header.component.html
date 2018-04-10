@@ -1,0 +1,18 @@
+<header class="post-header">
+  <h2 class="post-title">
+    <a [href]="item.href">{{item['subject']?.title|lowercase|slice:-20}}</a>
+    <small>{{item['subject']?.subtitle}}</small>
+  </h2>
+  <div class="post-info clearfix">
+    <span class="post-date">
+      <i class="glyphicon glyphicon-calendar"></i>{{item.date|date:'shortDate'}}</span>
+    <span class="post-author">
+      <i class="glyphicon glyphicon-user"></i>
+      <a href="http://blog.miniasp.com/author/will.aspx">{{item.author}}</a>
+    </span>
+    <span class="post-category">
+      <i class="glyphicon glyphicon-folder-close"></i>
+      <a [href]="item['category-link']">{{item.category}}</a>
+    </span>
+  </div>
+</header>
