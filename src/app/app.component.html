@@ -11,8 +11,8 @@
         <article class="post" id="post{{idx}}" *ngFor="let item of data; let idx=index">
           <header class="post-header">
             <h2 class="post-title">
-              <a [href]="item.href">{{item.subject?.title|lowercase|slice:-20}}</a>
-              <small>{{item.subject?.subtitle}}</small>
+              <a [href]="item.href">{{item['subject']?.title|lowercase|slice:-20}}</a>
+              <small>{{item['subject']?.subtitle}}</small>
             </h2>
             <div class="post-info clearfix">
               <span class="post-date">
