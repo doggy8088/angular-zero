@@ -1,7 +1,9 @@
 <header class="post-header">
   <h2 class="post-title">
-    <a [href]="item.href">{{item['subject']?.title|lowercase|slice:-20}}</a>
-    <small>{{item['subject']?.subtitle}}</small>
+    <a *ngIf="!isEdit" [href]="item.href">{{item.title}}</a>
+    <input *ngIf="isEdit" type="text" size="70" [value]="newTitle"
+      (keyup.enter)="doEdit($event.target.value)"
+      (keyup.escape)="$event.target.value = item.title; isEdit=false">
   </h2>
   <div class="post-info clearfix">
     <span class="post-date">
@@ -16,6 +18,8 @@
     </span>
     <span>
       <button (click)="deleteArticle()">刪除文章</button>
+      <button *ngIf="!isEdit" (click)="isEdit=true">編輯標題</button>
+      <button *ngIf="isEdit" (click)="isEdit=false">取消編輯</button>
     </span>
   </div>
 </header>

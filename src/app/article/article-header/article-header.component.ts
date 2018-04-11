@@ -13,13 +13,25 @@ export class ArticleHeaderComponent implements OnInit, OnDestroy {
   @Output()
   delete = new EventEmitter<any>();
 
+  @Output()
+  titleChanged = new EventEmitter<any>();
+
+  isEdit = false;
+  newTitle = '';
+
   constructor() { }
+
+  doEdit(title) {
+    this.newTitle = title;
+    this.titleChanged.emit({ id: this.item.id, title: title });
+  }
 
   deleteArticle() {
     this.delete.emit(this.item);
   }
 
   ngOnInit() {
+    this.newTitle = this.item.title;
   }
 
   ngOnDestroy() {
