@@ -14,5 +14,8 @@
       <i class="glyphicon glyphicon-folder-close"></i>
       <a [href]="item['category-link']">{{item.category}}</a>
     </span>
+    <span>
+      <button (click)="deleteArticle()">刪除文章</button>
+    </span>
   </div>
 </header>

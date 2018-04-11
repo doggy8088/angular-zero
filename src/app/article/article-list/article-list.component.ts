@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
 
-  data;
+  data: Array<any>;
 
   constructor() { }
+
+  doDelete(item) {
+    this.data = this.data.filter((v) => {
+      return v !== item;
+    });
+  }
 
   ngOnInit() {
 
