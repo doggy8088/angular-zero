@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
 
+  counter = 0;
   data: Array<any>;
 
   constructor() { }
 
   doDelete(item) {
     this.data = this.data.filter((v) => {
-      return v !== item;
+      return v.id !== item.id;
     });
   }
 
@@ -28,6 +29,10 @@ export class ArticleListComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    setTimeout(() => {
+      this.counter++;
+    }, 2000);
 
     this.data = [
       {
