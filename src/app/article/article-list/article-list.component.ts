@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-article-list',
@@ -10,7 +11,8 @@ export class ArticleListComponent implements OnInit {
   counter = 0;
   data: Array<any>;
 
-  constructor() { }
+  constructor(private datasvc: DataService) {
+  }
 
   doDelete(item) {
     this.data = this.data.filter((v) => {
@@ -29,7 +31,7 @@ export class ArticleListComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.datasvc.run();
     setTimeout(() => {
       this.counter++;
     }, 2000);

@@ -1,0 +1,12 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class DataService {
+
+  constructor() { }
+
+  run() {
+    console.log('DataService');
+  }
+
+}
