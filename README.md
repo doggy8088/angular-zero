@@ -1,8 +1,7 @@
 # 簡介
-此儲存庫是【[Angular 開發實戰：從零開始](https://www.udemy.com/angular-zero/)】線上課程的範例程式碼，以下是課程介紹與近期優惠訊息。  
+此儲存庫是【[Angular 開發實戰：從零開始](https://www.udemy.com/angular-zero/)】線上課程的範例程式碼，以下是課程介紹與近期優惠訊息。  
 
-## 課程名稱
-### Angular 開發實戰：從零開始 
+## Angular 開發實戰：從零開始 
 掌握 Angular 開發框架的重要知識與觀念
 
 ## 說明
