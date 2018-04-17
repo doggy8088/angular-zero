@@ -1,11 +1,9 @@
-# Angular 開發實戰：從零開始
+# 簡介
+此儲存庫是【[Angular 開發實戰：從零開始](https://www.udemy.com/angular-zero/)】線上課程的範例程式碼，以下是課程介紹與近期優惠訊息。  
+
+## 課程名稱
+### Angular 開發實戰：從零開始 
 掌握 Angular 開發框架的重要知識與觀念
-
-## 我會學些什麼呢？
-
-* 了解 Angular 開發框架與其優勢
-* 學會有效率的利用 Angular 開發前端應用
-* 掌握開發 Angular 的重要觀念與開發技巧
 
 ## 說明
 Angular 框架經過數年的發展，框架本身已經相當成熟，不但進入門檻越來越低，在執行速度、開發效率、學習曲線方面，也都得到了一個相當不錯的平衡點。我們都知道，網頁前端技術日新月異，但就我長期觀察下來，近兩年來 Angular 框架發展已經相當穩定，官方團隊也不斷精進整個開發生態，無論是在開發工具的支援，或是透過 Angular CLI 加速大型專案管理，都已經有相當程度的效益。現在，就是投入 Angular 學習的最佳時機！
@@ -16,7 +14,6 @@ Angular 框架經過數年的發展，框架本身已經相當成熟，不但進
 * Web 開發人員
 * 網頁前端工程師
 * 網頁設計師
-
 
 ## 課程大綱
 * 建立 Angular 開發環境
@@ -87,9 +84,17 @@ Angular 框架經過數年的發展，框架本身已經相當成熟，不但進
 	* 重構 DataService 服務元件 - 回傳 Observable 物件
 	* 使用 async 管道元件訂閱 Observable 物件
 
+## 我會學些什麼呢？
+* 了解 Angular 開發框架與其優勢
+* 學會有效率的利用 Angular 開發前端應用
+* 掌握開發 Angular 的重要觀念與開發技巧
+
 ## 要求
 * 了解基礎 HTML / CSS / JavaScript 語法
 * 具有基礎的程式設計概念 (寫過任何一種程式語言即可)
 
-## 課程連結
-[https://www.udemy.com/angular-zero/](https://www.udemy.com/angular-zero/)
+## 最新優惠
+* 推廣價：1980 元
+* 優惠期限：即日起至 2018/5/1 0:00
+* 優惠代碼：GH1980
+* 優惠連結：[Angular 開發實戰：從零開始](https://www.udemy.com/angular-zero/?couponCode=GH1980)
